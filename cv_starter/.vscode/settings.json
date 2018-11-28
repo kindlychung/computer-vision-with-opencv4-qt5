@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "qpushbutton": "cpp",
+        "qcoreapplication": "cpp",
+        "qsizepolicy": "cpp",
+        "qcheckbox": "cpp"
+    }
+}
