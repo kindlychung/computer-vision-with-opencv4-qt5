@@ -13,15 +13,12 @@ class FilterTypeChooser : public QWidget {
    public:
     FilterTypeChooser(QWidget* parent = nullptr);
     virtual ~FilterTypeChooser(){};
-
-    //    private:
-    //     QString image_path;
-
-   private:
-    QGroupBox* box;
     QRadioButton* medianBlurOpt;
     QRadioButton* gaussianBlurOpt;
     QCheckBox* displayOrNot;
+
+   private:
+    QGroupBox* box;
     QHBoxLayout* hLayout;
     QVBoxLayout* vLayout;
     //    private slots:

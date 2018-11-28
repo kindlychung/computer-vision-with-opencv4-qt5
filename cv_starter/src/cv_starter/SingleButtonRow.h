@@ -16,8 +16,10 @@ class SingleButtonRow : public QWidget {
     //    private:
     //     QString image_path;
 
-   private:
+   public:
     QPushButton* button;
+
+   private:
     QHBoxLayout* layout;
     //    private slots:
     //     void handleBrowseButton();
