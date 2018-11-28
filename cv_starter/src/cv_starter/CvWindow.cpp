@@ -40,5 +40,3 @@ CvWindow::CvWindow(QWidget* parent) : QMainWindow(parent) {
         }
     });
 };
-
-// void CvWindow::handleBrowseButton() { fileDialog->show(); }
