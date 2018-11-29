@@ -1,6 +1,7 @@
 
 #pragma once
 #include <QString>
+#include <QtGui/QCloseEvent>
 #include <QtWidgets/QCheckBox>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHBoxLayout>
@@ -22,6 +23,9 @@ class CvWindow : public QMainWindow {
     //    private:
     //     QString image_path;
 
+   protected:
+    void closeEvent(QCloseEvent* event);
+
    private:
     QWidget* widget;
     QVBoxLayout* layout;
@@ -29,6 +33,8 @@ class CvWindow : public QMainWindow {
     SimpleFileBrowser* inputBrowser;
     SimpleFileBrowser* outputBrowser;
     SingleButtonRow* buttonRow;
+    void loadSettings();
+    void saveSettings();
     //    private slots:
     //     void handleBrowseButton();
     //     void handleFilePath();

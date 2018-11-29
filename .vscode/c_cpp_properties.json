@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "defines": [],
+            "compilerPath": "/usr/bin/clang",
+            "includePath": [
+                "${default}",
+                "/usr/include/x86_64-linux-gnu/qt5/QtCore"
+            ]
+        }
+    ],
+    "version": 4
+}

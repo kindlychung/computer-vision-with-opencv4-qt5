@@ -32,15 +32,6 @@ class cv_starterConan(ConanFile):
     generators = "cmake"
     exports_sources = "src/%s/*" % name, "src/CMakeLists.txt", "src/*.cmake"
 
-    def system_requirements(self):
-        pack_name = None
-        if os_info.linux_distro == "ubuntu":
-            # put the system libs that you require here, e.g. ["libpulse-dev"]
-            pack_name = None
-        if pack_name:
-            installer = SystemPackageTool()
-            installer.install(pack_name)
-
     def build(self):
         cmake = CMake(self)
         cmake.configure(source_folder="src")

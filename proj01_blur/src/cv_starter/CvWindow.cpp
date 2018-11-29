@@ -1,5 +1,6 @@
 #include "CvWindow.h"
 #include <QDebug>
+#include <QtWidgets/QMessageBox>
 #include <QtWidgets/QSizePolicy>
 #include <opencv2/opencv.hpp>
 
@@ -40,3 +41,14 @@ CvWindow::CvWindow(QWidget* parent) : QMainWindow(parent) {
         }
     });
 };
+
+void CvWindow::closeEvent(QCloseEvent* event) {
+    int result =
+        QMessageBox::warning(this, "Exit", "Are you sure you want to quit?",
+                             QMessageBox::Yes, QMessageBox::No);
+    if (result == QMessageBox::Yes) {
+        event->accept();
+    } else {
+        event->ignore();
+    }
+}
